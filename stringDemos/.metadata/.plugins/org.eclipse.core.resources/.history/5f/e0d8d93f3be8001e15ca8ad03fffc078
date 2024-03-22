@@ -1,0 +1,12 @@
+package com.insuranceapp.model;
+
+import java.util.List;
+
+public class AppUser {
+	private String userName;
+	private Integer userId;
+	private String email;
+	private String password;
+	private List<String> role;
+
+}

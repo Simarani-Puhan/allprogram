@@ -1,0 +1,13 @@
+package com.voya.auto;
+
+import org.springframework.stereotype.Component;
+
+@Component("instruments")
+public class Violin implements IInstrument{
+
+	@Override
+	public void play(String string) {
+		
+	}
+
+}

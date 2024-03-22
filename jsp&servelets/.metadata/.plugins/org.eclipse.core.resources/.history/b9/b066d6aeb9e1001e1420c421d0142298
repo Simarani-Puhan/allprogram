@@ -1,0 +1,28 @@
+<%@page import="com.doctorapp.model.Doctor"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<%
+Doctor doctor=(Doctor)request.getAttribute("doctor");
+String doctorName=(String)request.getAttribute("doctorName");
+out.println("doctorName :"+doctorName+"<br>");
+Integer doctorId=(Integer)request.getAttribute("doctorId");
+out.println("doctorId :"+doctorId+"<br>");
+String speciality=(String)request.getAttribute("speciality");
+out.println("speciality :"+speciality+"<br>");
+Integer experience=(Integer)request.getAttribute("experience");
+out.println("experience :"+experience+"<br>");
+double fees=(Double)request.getAttribute("fees");
+out.println("fees :"+fees+"<br>");
+Integer ratings=(Integer)request.getAttribute("ratings");
+out.println("ratings :"+ratings+"<br>");
+%>
+
+</body>
+</html>

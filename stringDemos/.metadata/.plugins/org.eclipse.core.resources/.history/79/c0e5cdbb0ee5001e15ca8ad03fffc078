@@ -1,0 +1,29 @@
+package com.spring.constructor;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Student {
+	
+	private String studName;
+	private String studDept;
+	public String getStudName() {
+		return studName;
+	}
+	public void setStudName(String studName) {
+		this.studName = studName;
+	}
+	public String getStudDept() {
+		return studDept;
+	}
+	public void setStudDept(String studDept) {
+		this.studDept = studDept;
+	}
+	@Override
+	public String toString() {
+		return "Student [studName=" + studName + ", studDept=" + studDept + "]";
+	}
+	
+	
+
+}

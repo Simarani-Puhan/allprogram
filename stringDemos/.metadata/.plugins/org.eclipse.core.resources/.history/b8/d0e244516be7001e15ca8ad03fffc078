@@ -1,0 +1,3 @@
+spring.application.name=spring-insuranceapp-rest
+
+server.port=8081

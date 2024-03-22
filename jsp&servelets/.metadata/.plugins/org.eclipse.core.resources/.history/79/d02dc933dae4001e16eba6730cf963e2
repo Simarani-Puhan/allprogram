@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="updateServlet">
+DoctorName<input type="text" name="doctorName" value="${doctor.doctorName }" disabled><br>
+DoctorId<input type="number" name="doctorId" value="${doctor.doctorId }" readonly><br>
+Speciality<input type="text" name="speciality" value="${doctor.speciality }" disabled><br>
+Fees<input type="number" name="fees" value="${doctor.fees }" disabled><br>
+Ratings<input type="number" name="ratings" value="${doctor.ratings }" readonly><br>
+Experience<input type="number" name="experience" value="${doctor.experience }" readonly><br>
+
+
+</form>
+
+</body>
+</html>

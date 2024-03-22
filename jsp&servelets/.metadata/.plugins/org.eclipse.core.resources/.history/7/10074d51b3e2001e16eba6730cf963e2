@@ -1,0 +1,14 @@
+package org.doctorapp.exceptions;
+
+public class IdNotFoundException {
+
+	public IdNotFoundException() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	 public IdNotFoundException(String message) {
+	        super();
+	    }
+
+}

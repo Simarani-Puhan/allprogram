@@ -1,0 +1,14 @@
+package com.insuranceapp.repository;
+
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
+
+import com.insuranceapp.model.Insurance;
+
+@Mapper
+public class IInsuranceRepository {
+	
+	@Insert("insert into insurance(insurance_id,policy_name,brand,type,duration,premium) values(#{insuranceId},#{policyName},#{brand},#{type},#{duration},#{premium})")
+	void addInsurance(Insurance insurance);
+
+}

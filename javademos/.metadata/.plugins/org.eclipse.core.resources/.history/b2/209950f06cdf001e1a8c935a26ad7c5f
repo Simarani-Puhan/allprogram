@@ -1,0 +1,46 @@
+package com.voya.training;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+class CalculatorTestCases {
+	Calculator calculator=null;
+
+	@BeforeAll
+	static void init() throws Exception {
+		System.out.println("Called before all the testcaes");
+	}
+
+	@AfterAll
+	static void cleanup() throws Exception {
+		System.out.println("Called after all the testcaes");
+	}
+
+	@BeforeEach
+	void setUp() throws Exception {
+		calculator=new Calculator();
+		System.out.println("Called before each testcaes");
+		
+	}
+
+	@AfterEach
+	void tearDown() throws Exception {
+		calculator=null;
+		System.out.println("Called after each testcaes");
+	}
+
+	@Test
+	@DisplayName("Testing sum method")
+	void testSum() {
+		int actual=calculator.sum(10, 20);
+		Assertions.assertEquals(actual, 30, "output should be 30");
+	}
+
+}

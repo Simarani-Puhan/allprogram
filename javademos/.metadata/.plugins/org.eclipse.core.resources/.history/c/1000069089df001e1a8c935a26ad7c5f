@@ -1,0 +1,15 @@
+package com.voya.sample;
+
+import org.junit.platform.runner.JUnitPlatform;
+import org.junit.platform.suite.api.ExcludePackages;
+import org.junit.platform.suite.api.IncludePackages;
+import org.junit.platform.suite.api.SelectPackages;
+import org.junit.runner.RunWith;
+
+@SelectPackages({"com.voya.testcase"})
+@IncludePackages({"com.voya.testcase.greet"})
+//@ExcludePackages({"com.voya.testcase.greet"})
+
+public class AllTests {
+
+}

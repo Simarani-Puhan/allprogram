@@ -1,0 +1,22 @@
+package com.insuranceapp.repository;
+
+import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Update;
+
+import com.insuranceapp.model.Insurance;
+
+@Mapper
+public interface IInsuranceRepository {
+	
+	@Insert("insert into insurance(insurance_id,policy_name,brand,type,duration,premium) values(#{insuranceId},#{policyName},#{brand},#{type},#{duration},#{premium})")
+	void addInsurance(Insurance insurance);
+	
+	 @Update("update insurance set insurance_id=#{insuranceId} where premium=#{premium}")
+	void updateInsurance(int insuranceId,double premium);
+	
+	 @Delete("delete from insurance where insurance_id=#{insuranceId}")
+	 void deleteInsurance(int insuranceId);
+
+}

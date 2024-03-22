@@ -1,0 +1,14 @@
+package com.voya.testcases;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class CalculatorTest {
+
+	@Test
+	void testSum() {
+		fail("Not yet implemented");
+	}
+
+}

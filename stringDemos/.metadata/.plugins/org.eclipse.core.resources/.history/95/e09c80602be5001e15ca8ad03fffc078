@@ -1,0 +1,44 @@
+package com.voya.auto;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Performer {
+	@Autowired
+	@Qualifier("guitar")
+	private IInstrument instrument;
+	@Autowired
+	private IInstrument violin;
+	@Autowired
+	private IInstrument keyboard;
+	
+	
+	public IInstrument getInstrument() {
+		return instrument;
+	}
+	public void setInstrument(IInstrument instrument) {
+		this.instrument = instrument;
+	}
+	
+	private IInstrument instruments;
+
+	public Performer(IInstrument instrument) {
+		super();
+		this.instrument = instrument;
+	}
+
+   void playMusic(String choice,String song) {
+	   if(choice.equals("g"))
+		   instruments.play(song);
+	   if(choice.equals("v"))
+	   violin.play(song);
+	   
+	   if(choice.equals("k"))
+		   keyboard.play(song);
+   }
+	
+	
+
+}

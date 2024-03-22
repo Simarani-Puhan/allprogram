@@ -1,0 +1,11 @@
+package com.spring.constructor;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Student {
+	
+	private String studName;
+	private String studDept;
+
+}

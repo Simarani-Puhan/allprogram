@@ -1,0 +1,39 @@
+package com.stud.testacases;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import com.voya.training.StudentDetails;
+
+class StudentDetailsTestcases {
+	 StudentDetails student=null;
+
+	@BeforeAll
+	static void init() throws Exception {
+	}
+
+	@AfterAll
+	static void cleanup() throws Exception {
+	}
+
+	@BeforeEach
+	void setUp() throws Exception {
+		student= new StudentDetails();
+	}
+
+	@AfterEach
+	void tearDown() throws Exception {
+		student=null;
+	}
+
+	@Test
+	void testtotalMarks() {
+		fail("Not yet implemented");
+	}
+
+}

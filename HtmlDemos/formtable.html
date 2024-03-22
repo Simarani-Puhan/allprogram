@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <form>
+        <tr>
+            <th colspan="2"><h2>Fill the form</h2></th>
+        </tr>
+            <td><b>Username</b></td>
+            <td><input type="text" name="username" placeholder="Enter Name"></td>
+        <tr>
+            <td><b>Password</b></td>
+            <td><input type="text" name="password" placeholder="Enter Password"></td>
+            </form>
+        </tr>
+            <td><b>Gender</b></td>
+            <td> <input type="radio" name="gender" value="female" >Female
+                <input type="radio" name="gender" value="male" >Male</td>
+        <tr>
+            <td><b>Course</b></td>
+            <td><select name="Course" multiple size="3">
+                <option value="Java">Java</option>
+                <option value="Spring">Spring</option>
+                <option value="Angular">Angular</option>
+                <option value="Node">Node</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td><b>Hobbies</b></td>
+            <td><input type="checkbox" name="hobby" value="dance">Dance
+                <input type="checkbox" name="hobby" value="music">Music
+                <input type="checkbox" name="hobby" value="sports">Sports
+                <input type="checkbox" name="hobby" value="reading">reading</td>
+        </tr>
+        <tr>
+            <td><b>Comments</b></td>
+            <td><textarea rows="20" columns="20">Share your thought</textarea></td><br>
+        </tr>
+        <tr>
+            <input type="submit" value="Register">
+            <input type="submit" value="Cancel">
+        </tr>
+
+    </form>
+    </table>
+</body>
+</html>
