@@ -26,7 +26,7 @@ public class AppUserServiceImpl implements UserDetailsManager {
 		AppUser appUser = appUserRepository.findByUsername(username);
 		if (appUser == null)
 			throw new UsernameNotFoundException(username);
-		UserDetails details = appUserMapper.convertToAppUser(appUser);
+		UserDetails details = appUserMapper.convertToUserDetails(appUser);
 		return null;
 	}
 

@@ -8,20 +8,23 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 @Component
 public class AppUserMapper {
 	
+	private PasswordEncoder passwordEncoder;
+	
 	public AppUser convertToAppUser(UserDetails userDetails) {
 		String userName=userDetails.getUsername();
-		String password=userDetails.getPassword();
+		String password=passwordEncoder.encode (userDetails.getPassword());
 		    AppUser appUser=new AppUser();
 			appUser.setUserName(userName);
 			appUser.setPassword(password);
 			return appUser;
 				
 	}	
-			public UserDetails convertToAppUser(AppUser appUser) {
+			public UserDetails convertToUserDetails(AppUser appUser) {
 				String userName=appUser.getUserName();
 				String password=appUser.getPassword();
            List<GrantedAuthority>authorities=new ArrayList<>();

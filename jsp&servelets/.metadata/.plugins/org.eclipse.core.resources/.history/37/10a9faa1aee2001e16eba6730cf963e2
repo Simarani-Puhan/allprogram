@@ -1,5 +1,0 @@
-package org.doctorapp.exceptions;
-
-public class IdNotFoundException {
-
-}
